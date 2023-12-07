@@ -5,15 +5,10 @@ const students = [
   { name: "Joan", score: 95 },
 ];
 
-let result=[1,2,3,4].reduce((accumulator, currentValue) => {
-  return  accumulator+currentValue;
-},)
+let scoreTotal=students.reduce((accumulator, currentValue) => (accumulator+currentValue.score),0);
 
-let result2 = [1, 2, 3, 4].reduce((accumulator, currentValue) => {
-  return accumulator + currentValue;
-});
+let averageScore=scoreTotal/students.length;
 
+console.log(`output: ${averageScore}`); //Output: 87.5
 
-
-
-console.log(result);// Output: 87.5
+//let scoreTotal=students.reduce((accumulator, currentValue) => accumulator+currentValue.score,0);
